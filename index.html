@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador de Costos || Apolo</title>
+</head>
+<body>
+    <header>
+        <h1>Apolo Rugs</h1>
+        <h2>Calculador de Costos</h2>
+    </header>
+    <div>
+        <label>Ingrese Ancho (M):</label> <input id="ancho" type="number">
+        <label >Ingrese Alto (M):</label> <input id="alto" type="number">
+        <button class="boton" type="button" onclick="comenzar()">Enviar</button>
+    </div>
+
+    <div>
+        <p id="metrosC"></p>
+        <p id="costoLana"></p>
+        <p id="costoLienzo"></p>
+        <p id="costoFin"></p>
+        <p id="horasTrabajo"></p>
+
+        <p id="total"></p>
+    </div>
+<script src="costos.js"></script>
+</body>
+</html>

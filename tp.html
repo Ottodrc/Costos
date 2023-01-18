@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="tp.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="contenedor">
+        <h1 class="titulo">Bienvenido al Estacionamiento</h1>
+        <p class="parrafo">Ingrese la cantidad de lugares ocupados (20 total)</p>
+        <div class="contenedor">
+            <label>Ingrese lugares ocupados inicialmente:</label><input id="ocupadosInic" name="ocupadosInic">
+        <button class="boton boton--diferente" type="button" onclick="comenzar()">Enviar</button>
+    </div>
+        
+    </header>
+    <main class="contenedor contenedor--diferente">
+        <p class="parrafo" id="error"></p>
+        <p class="parrafo" id="disponibles"></p>
+        <p class="parrafo" id="ocupados"></p>
+
+    <div class="botones">
+        <button class="boton" type="button" onclick="sumar()">Sumar</button>
+        <button class="boton" type="button" onclick="restar()">Restar</button>
+        <button class="boton" type="button" onclick="apagado()">Apagar</button>
+    </div>
+    </main>
+    <script>
+
+        var lugares = 20;
+        var ocupadosInic;
+        var ocupados;
+        var disponible;
+        var contadorAutos;
+        var autosTotales; 
+        
+        const comenzar = () =>{
+            autosTotales = 0; 
+            ocupadosInic = parseFloat(document.getElementById("ocupadosInic").value);
+            if(ocupadosInic <= 20){
+                disponible = lugares - ocupadosInic;
+                ocupados = ocupadosInic;
+                parrafoDisponible = "Lugares disponibles: " + disponible;
+                parrafoOcupados = "Lugares ocupados: " + ocupados;
+                document.getElementById("disponibles").innerHTML = parrafoDisponible;
+                document.getElementById("ocupados").innerHTML = parrafoOcupados;
+            }else{
+                document.getElementById("error").innerHTML = "Error. Ingrese un numero valido";
+            }
+        }
+
+        sumar = () =>{
+            if (ocupados < 20) {
+                ocupados = ocupados + 1;
+                disponible = lugares - ocupados;
+                parrafoDisponible = "Lugares disponibles: " + disponible;
+                parrafoOcupados = "Lugares ocupados: " + ocupados;
+                document.getElementById("disponibles").innerHTML = parrafoDisponible;
+                document.getElementById("ocupados").innerHTML = parrafoOcupados;
+                contadorAutos = contadorAutos + 1 
+            }else if(ocupados = 20){
+                alert("No entra");
+            }
+        }
+
+        restar = () =>{
+            if (ocupados <= 20 && ocupados >= 1) {
+                ocupados = ocupados - 1;
+                disponible = lugares - ocupados;
+                parrafoDisponible = "Lugares disponibles: " + disponible;
+                parrafoOcupados = "Lugares ocupados: " + ocupados;
+                document.getElementById("disponibles").innerHTML = parrafoDisponible;
+                document.getElementById("ocupados").innerHTML = parrafoOcupados;
+                
+            }else if(ocupados < 2){
+                alert("No hay autos para sacar");
+            }
+        }
+        autosTotales = contadorAutos + ocupadosInic; 
+        
+        apagado = () =>{
+            autosTotales = contadorAutos + parseFloat(ocupadosInic); 
+            alert("Fin del día! Cantidad de autos: " + autosTotales);
+      
+        }
+     
+            
+      
+            
+    
+
+
+        
+        </script>
+</body>
+</html> 
