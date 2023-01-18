@@ -54,7 +54,7 @@ const comenzar = () =>{
     }else if (porcentaje <= 25){
         costoLienzo = precioLienzo / 4
     }*/
-    costoLienzo = precioLienzo;
+    costoLienzo = precioLienzo/2;
     console.log(porcentaje);
     parrafoLienzo = "Costo Lienzo: " + costoLienzo
     document.getElementById("costoLienzo").innerHTML = parrafoLienzo;
