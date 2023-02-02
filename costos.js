@@ -19,7 +19,7 @@ var costoLienzo;
 var costoFriselina;
 var costoFin;
 
-var precioLana = 3200; /*Precio x kilo (por mayor)*/ 
+var precioLana = 3400; /*Precio x kilo (por mayor)*/ 
 var precioLienzo = 2400;   /*Precio 1/2 Lienzo*/
 var precioSilicona = 120; /*precio silicona por unidad*/
 var precioFriselina = 700; /*precio friselina x mtsC*/
