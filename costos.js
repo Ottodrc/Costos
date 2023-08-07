@@ -19,11 +19,11 @@ var costoLienzo;
 var costoFriselina;
 var costoFin;
 
-var precioLana = 4200; /*Precio x kilo (por mayor)*/ 
-var precioLienzo = 2800;   /*Precio 2mts Lienzo*/
+var precioLana = 5400; /*Precio x kilo (por mayor)*/ 
+var precioLienzo = 3000;   /*Precio 2mts Lienzo*/
 var precioSilicona = 150; /*precio silicona por unidad*/
 var precioFriselina = 1250; /*precio telaSecundaria x mtsC*/
-var precioPromPeg = 1000; //precio del pegamento/alfombras que salen con 4l
+var precioPromPeg = 1200; //precio del pegamento/alfombras que salen con 4l
    
 var horasTrabajo;
 var subtotal;
@@ -39,8 +39,7 @@ const comenzar = () =>{
     document.getElementById("metrosC").innerHTML = parrafoMetros;
 
     /*precio lana*/
-    cantLana = (metrosC * 1.2
-        )/0.5;
+    cantLana = (metrosC * 1.4)/0.5;
     costoLana = (cantLana * precioLana);
     parrafoLana = "Costo Lana: " + costoLana; 
     document.getElementById("costoLana").innerHTML = parrafoLana;
